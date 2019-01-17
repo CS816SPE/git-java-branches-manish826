@@ -6,7 +6,9 @@ import java.util.Scanner;
    Scanner scan=new Scanner(System.in);
    do{
       System.out.print("1. ADD TWO NUMBER\n");
-      System.out.print("2. Exit\n\n");
+      System.out.print("2. SUB TWO NUMBER\n");
+      System.out.print("3. MUL TWO NUMBER\n");
+      System.out.print("4. Exit\n\n");
       System.out.print("Enter YOur Choice : ");
       choice = scan.next().charAt(0);
       switch(choice){
@@ -16,14 +18,26 @@ import java.util.Scanner;
                    res=a+b;
                    System.out.print("Result = " + res);
                    break;
-       case '2' : System.exit(0);
+       case '2' : System.out.print("Enter Two Number : ");
+                   a=scan.nextFloat();
+                   b=scan.nextFloat();
+                   res=a-b;
+                   System.out.print("Result = " + res);
+                   break;
+       case '3' : System.out.print("Enter Two Number : ");
+                   a=scan.nextFloat();
+                   b=scan.nextFloat();
+                   res=a*b;
+                   System.out.print("Result = " + res);
+                   break;
+       case '4' : System.exit(0);
                   break;
        default : System.out.print("INVALID CHOICE !!!");
                  break;
     }
     System.out.print("\n--------------------------------\n");
 }
-while(choice!=2);
+while(choice!=4);
 }
 }
 
